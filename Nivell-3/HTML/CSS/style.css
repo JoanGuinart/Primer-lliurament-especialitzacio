@@ -1,0 +1,463 @@
+* {
+  margin: 6px;
+  padding: 6px;
+  box-sizing: center; /* border box mante el tamany dels elements i serveix per no trencar el box model*/
+}
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main {
+  display: flex; /*posa el contingut en linea*/
+  flex-flow: column nowrap; /*combina flex direction i flex wrap*/
+  justify-content: space-around; /*justifica el contingut en aquest cas: distribuits uniformement amb  espai igual entre ells*/
+}
+
+.sections {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-img {
+  background: url(./images/header.jpg);
+  background-repeat: no-repeat;
+  background: cover;
+  background-position: center center;
+}
+
+.main-header {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: row nowrap; /*row significa de esquerra a dreta i nowrap significa que els elements flex estan en una sola linea(wrap seria en varies linies*/
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  padding: 0px;
+  max-width: 60px;
+  height: auto;
+  justify-content: center;
+  animation: moverLogoIzquierda 2s ease-in;
+}
+.text-hover:hover {
+  color: rgb(46, 46, 46);
+}
+
+.inicio {
+  flex: auto;
+  text-decoration: none;
+  color: grey;
+}
+.nav {
+  flex: auto;
+  flex-basis: auto;
+  text-decoration: none;
+  color: grey;
+  flex-direction: row nowrap;
+}
+
+.color-nav {
+  color: rgb(171, 171, 171);
+}
+
+.hotels {
+  flex: auto;
+  text-decoration: none;
+  color: grey;
+}
+.flights {
+  flex: auto;
+  text-decoration: none;
+  color: grey;
+}
+.contact {
+  flex: auto;
+  text-decoration: none;
+  color: grey;
+}
+.text-hover {
+  font-size: small;
+  margin-left: 0%;
+}
+
+.fa-facebook {
+  color: blue;
+}
+.fa-twitter {
+  color: rgb(86, 187, 255);
+}
+
+.title {
+  flex: auto;
+  background: rgb(222, 220, 220);
+  opacity: 0.8;
+  justify-content: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 7%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.main-title {
+  flex: auto;
+  font-size: 1.3rem;
+  font-family: "Times New Roman", Times, serif;
+  color: rgba(211, 77, 0, 0.949);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  animation: tituloResalta 2s ease-in;
+}
+
+.main-section {
+  margin: 0;
+  display: flex;
+}
+
+.groups {
+  background: rgb(183, 181, 181);
+  flex: 2 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.group {
+  background: rgb(206, 206, 206);
+  flex: 1 1 40%;
+  width: auto;
+  height: auto;
+}
+.group-inside-1 {
+  display: flex;
+  background: url(./images/sakura.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  height: 300px;
+  position: relative;
+}
+.group-inside-2 {
+  display: flex;
+  background: url(./images/comida.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  height: 300px;
+  position: relative;
+}
+.group-inside-3 {
+  display: flex;
+  background: url(./images/fuji.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  height: 300px;
+  position: relative;
+}
+.group-inside-4 {
+  display: flex;
+  background: url(./images/noche.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  height: 300px;
+  position: relative;
+}
+.columnas {
+  display: flex;
+}
+.columna {
+  column-count: 2;
+  column-gap: 5px;
+}
+.name-group {
+  background: salmon;
+}
+
+.section-nav {
+  background: rgb(129, 170, 170);
+  display: flex;
+  flex-flow: wrap;
+}
+
+.main-aside {
+  background: rgb(191, 191, 191);
+  flex: 1 1 auto;
+}
+
+.section-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav {
+  background: rgb(255, 249, 215);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes moverLogoIzquierda {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 100;
+    transform: translate(0);
+  }
+}
+@keyframes tituloResalta {
+  0% {
+    opacity: 0;
+    font-size: 50%;
+  }
+  25% {
+    opacity: 50;
+    color: orange;
+    font-size: smaller;
+  }
+  50% {
+    opacity: 100;
+    font-size: medium;
+  }
+  75% {
+    opacity: 50;
+    color: orange;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.fa-plane {
+  animation: planeFlight 2s ease-in;
+}
+@keyframes planeFlight {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 100;
+    transform: translate(0);
+    transform: rotateX(180deg);
+  }
+}
+
+/*tablet*/
+@media only screen and (max-width: 800px) {
+  .main-section {
+    background: white;
+    display: block;
+  }
+  .main-aside {
+    background: rgb(234, 72, 72);
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .sections {
+    display: flex;
+    flex-direction: column;
+  }
+  .size {
+    margin: 0px;
+    padding: 4px;
+  }
+  .fa-facebook {
+    color: blue;
+    background: rgb(175, 201, 255);
+    border-radius: 15px;
+  }
+  .fa-twitter {
+    color: rgb(86, 187, 255);
+    background: rgb(182, 182, 245);
+    border-radius: 15px;
+  }
+
+  .logo {
+    display: flex;
+    padding: 0px;
+    max-width: 60px;
+    height: auto;
+    justify-content: center;
+    animation: moverLogoAbajo 2s ease-in;
+  }
+
+  @keyframes moverLogoAbajo {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100% {
+      opacity: 100;
+      transform: translate(0);
+    }
+  }
+  .main-title {
+    flex: auto;
+    font-size: 1.3rem;
+    font-family: "Times New Roman", Times, serif;
+    color: rgba(211, 77, 0, 0.949);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    animation: tituloResalta 1s ease-in;
+  }
+  @keyframes tituloResalta {
+    0% {
+      opacity: 0;
+      color: orange;
+    }
+    25% {
+      opacity: 50;
+      color: rgb(255, 0, 0);
+    }
+    50% {
+      opacity: 100;
+    }
+    75% {
+      opacity: 50;
+      color: rgb(255, 94, 0);
+    }
+    100% {
+      opacity: 100;
+    }
+  }
+  .fa-plane {
+    animation: planeFlight 2s ease-in;
+  }
+  @keyframes planeFlight {
+    0% {
+      opacity: 00;
+      transform: translateX(-300px);
+    }
+    100% {
+      opacity: 100;
+      transform: translate(0);
+      transform: rotateX(180deg);
+    }
+  }
+}
+
+/*mobile*/
+@media only screen and (max-width: 605px) {
+  .main-menu {
+    background: rgb(53, 53, 87);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .groups {
+    background: rgb(1, 95, 124);
+    flex: 2 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+  }
+  .group {
+    background: rgb(108, 163, 187);
+    flex: 1 1 40%;
+  }
+
+  .section-nav {
+    background: rgb(158, 226, 226);
+    flex: 1 1 100%;
+  }
+  .main-aside {
+    background: rgb(234, 102, 72);
+    flex: 1 1 auto;
+  }
+
+  .aside-commercial {
+    background: rgb(255, 179, 132);
+    display: flex;
+  }
+  .fa-facebook {
+    background: none;
+  }
+  .fa-twitter {
+    background: none;
+  }
+
+  .logo {
+    display: flex;
+    padding: 0px;
+    max-width: 60px;
+    height: auto;
+    justify-content: center;
+    animation: moverLogoMobil 2s ease-in;
+  }
+  @keyframes moverLogoMobil {
+    from {
+      transform: rotateZ(0deg);
+    }
+    to {
+      transform: rotateZ(360deg);
+    }
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
+  }
+  .main-title {
+    flex: auto;
+    font-size: 1.3rem;
+    font-family: "Times New Roman", Times, serif;
+    color: rgba(211, 77, 0, 0.949);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    animation: tituloResalta 1s ease-in;
+  }
+  @keyframes tituloResalta {
+    0% {
+      opacity: 0;
+      color: rgb(255, 187, 0);
+    }
+    25% {
+      opacity: 50;
+      color: rgb(255, 196, 0);
+    }
+    50% {
+      opacity: 100;
+      color: rgb(165, 132, 42);
+    }
+    75% {
+      opacity: 50;
+      color: rgb(255, 94, 0);
+    }
+    100% {
+      opacity: 100;
+    }
+  }
+  .fa-plane {
+    animation: planeFlight 2s ease-in;
+  }
+  @keyframes planeFlight {
+    0% {
+      opacity: 0;
+      transform: translateX(-150px);
+    }
+    100% {
+      opacity: 100;
+      transform: translate(0);
+      transform: rotateX(180deg);
+    }
+  }
+}
